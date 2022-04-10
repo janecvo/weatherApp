@@ -4,47 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>What's the Weather?</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body id="body">
     <div class="header1">
-        <h1 class="text-center">The Weather Deities Say...</h1>
-        <p>Getting ready to leave the house? Find out what to expect outside by sharing your zip code to find out what your weather is.</p> 
-        <p>Are the weather deities going to treat you well? Let's see!</p>
+        <h1 class="text-center">What's the Weather?</h1>
+        <p>Getting ready to leave the house? Find out what to expect by sharing your zip code to find out what your weather is.</p> 
         <form>
             <div class="search">
                 <input type="text" class="search1" id="search1" placeholder="What's your zip code?">
             </div>
             <div class="submit"> 
-                <button type="submit" class="btn" id="submit">The weather deities says...</button>
+                <button type="submit" class="btn" id="submit">What's the Weather?</button>
             </div>
         </form>
         <br>
         <br>
 <!-- displays the date and city information -->
         <div class="output">
-            <div class="names">
+            <div class="column">
                 <h3 id="date"></h3>
                 <h3 id="cityName"></h3>
             </div>
-<!-- displays temperatures and condition -->
+<!-- displays temperatures -->
             <div class="display-row">
-                <!-- <div class="box"> -->
+                <div class="column">
                     <h4>Current Temperature:</h4>
                         <p id="temp"></p>
+                        <br>
+                        Low: <p id="low"></p>
+                        High: <p id="high"></p>
+                </div>
+<!-- displays conditions  -->
+                <div class="column"> 
                     <h4>Condition</h4>
-                        <p>  <p id ="con"></p> <img id="weatherIcon" src="images\default.jpg" class="img-responsive" style="width:100%" alt="weather conditions"></p> 
-                <!-- </div> -->
-                <!-- <div class="box"></div>
-                <div class="box"> -->
-                    <h4>Today's Low</h4>
-                        <p id="low"></p> 
-                    <h4>Today's High</h4>
-                        <p id="high"></p>
-                <!-- </div>  -->
+                        <p>  <p id ="con"></p> <img id="weatherIcon" src="images\default.jpg" class="img-responsive" style="width:100%" alt="weather conditions"></p>
+                    <h4>Humidity</h4>
+                        <p id="humidity"></p>  
+                </div> 
+<!-- displays wind conditions -->
+                <div class = "column">
+                    <h4>Wind </h4>
+                    Speed: <p id="wind"></p>
+                    <br>
+                    Gust: <p id="gust"></p>
+                    
+                </div>
             </div>
         </div>    
     </div>

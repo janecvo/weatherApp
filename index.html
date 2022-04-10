@@ -7,7 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/3b4def068e.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -32,15 +31,20 @@
                 <h3 id="cityName"></h3>
             </div>
 <!-- displays temperatures and condition -->
-            <div class="display">
-                <h5>Current Temperature:</h5>
-                    <p id="temp"></p>
-                <h5>Condition</h5>
-                    <p id="con"><img id="weatherIcon" src="images\default.jpg" class="img-responsive" style="width:100%" alt="image of dog top"></p> 
-                <h5>Today's Low</h5>
-                    <p id="low"></p> 
-                <h5>Today's High</h5>
-                    <p id="high"></p> 
+            <div class="display-row">
+                <!-- <div class="box"> -->
+                    <h4>Current Temperature:</h4>
+                        <p id="temp"></p>
+                    <h4>Condition</h4>
+                        <p>  <p id ="con"></p> <img id="weatherIcon" src="images\default.jpg" class="img-responsive" style="width:100%" alt="weather conditions"></p> 
+                <!-- </div> -->
+                <!-- <div class="box"></div>
+                <div class="box"> -->
+                    <h4>Today's Low</h4>
+                        <p id="low"></p> 
+                    <h4>Today's High</h4>
+                        <p id="high"></p>
+                <!-- </div>  -->
             </div>
         </div>    
     </div>
@@ -48,5 +52,3 @@
     <script src="index.js"></script>
 </body>
 </html>
-
-<!-- <img id="clothes" src="https://c.stocksy.com/a/4C6700/z9/1692108.jpg" class="img-responsive" style="width:100%" alt="image of dog top"> -->

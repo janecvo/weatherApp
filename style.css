@@ -1,7 +1,7 @@
 body{
-    display:flex;
+    /* display:flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     /* background-image: background-image: linear-gradient(to yellow, green , blue); */
     background-image: url("http://i.stack.imgur.com/9WYxT.png");
     background-position: center;
@@ -11,9 +11,16 @@ body{
     /* background-color: lightcyan; */
     text-align: center;
     font-family: 'Secular One', sans-serif;
-    color: red;
+    color: rgb(173, 176, 230);
 }
 
+h4{
+    color: lightcyan;
+}
+
+p{
+    display: inline-block;
+}
 .output{
     border-style: dashed;
     padding: 10px;

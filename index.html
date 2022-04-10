@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3b4def068e.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="header1">
+        <h1 class="text-center">The Weather Deities Say...</h1>
+        <p>Getting ready to leave the house? Find out what to expect outside by sharing your zip code to find out what your weather is.</p> 
+        <p>Are the weather deities going to treat you well? Let's see!</p>
+        <form>
+            <div class="search">
+                <input type="text" class="search1" id="search1" placeholder="What's your zip code?">
+            </div>
+            <div class="submit"> 
+                <button type="submit" class="btn" id="submit">The weather deities says...</button>
+            </div>
+        </form>
+        <br>
+        <br>
+<!-- displays the date and city information -->
+        <div class="output">
+            <div class="names">
+                <h3 id="date"></h3>
+                <h3 id="cityName"></h3>
+            </div>
+<!-- displays temperatures and condition -->
+            <div class="display">
+                <h5>Current Temperature:</h5>
+                    <p id="temp"></p>
+                <h5>Condition</h5>
+                    <p id="con"><img id="weatherIcon" src="images\default.jpg" class="img-responsive" style="width:100%" alt="image of dog top"></p> 
+                <h5>Today's Low</h5>
+                    <p id="low"></p> 
+                <h5>Today's High</h5>
+                    <p id="high"></p> 
+            </div>
+        </div>    
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
+<!-- <img id="clothes" src="https://c.stocksy.com/a/4C6700/z9/1692108.jpg" class="img-responsive" style="width:100%" alt="image of dog top"> -->

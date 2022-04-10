@@ -1,0 +1,35 @@
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: background-image: linear-gradient(to yellow, green , blue); */
+    background-image: url("http://i.stack.imgur.com/9WYxT.png");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-color: lightcyan; */
+    text-align: center;
+    font-family: 'Secular One', sans-serif;
+    color: red;
+}
+
+.output{
+    border-style: dashed;
+    padding: 10px;
+    width: 400px;
+    position:relative;
+    margin: auto;
+
+}
+
+button, input{
+    cursor: pointer;
+}
+
+#weatherIcon {
+    max-width: 52px;
+    max-height: 57px;
+    width: auto;
+    height: auto;
+}

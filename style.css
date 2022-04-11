@@ -11,17 +11,20 @@ body{
     /* background-color: lightcyan; */
     text-align: center;
     font-family: 'Secular One', sans-serif;
-    color: rgb(173, 176, 230);
+    color: lightseagreen;
 }
 
+iframe{
+    margin-left: -95px;
+}
 
 .column{
     box-shadow: 0 4px 8px 0; 
     border-radius: 10px;
 }
 
-h4{
-    color: lightcyan;
+h1,h4{
+    color: red;
 }
 
 p{

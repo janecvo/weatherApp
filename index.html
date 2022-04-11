@@ -14,15 +14,14 @@
         <h1 class="text-center">What's the Weather?</h1>
         <p>Getting ready to leave the house? Find out what to expect by sharing your zip code to find out what your weather is.</p>
         <div class = "big1">
-            <form>
+            <form> Enter your Zip Code
                 <div class="search">
                     <input type="text" class="search1" id="search1" placeholder="What's your zip code?">
                 </div>
                 <div class="submit"> 
-                    <button type="submit" class="btn" id="submit">Tell me my weather!</button>
+                    <button type="submit" class="btn" id="submit">Click!</button>
                 </div>
             </form>
-            <br>
             <br>
     <!-- displays the date and city information -->
             <div class="output">
@@ -31,6 +30,16 @@
                     <h3 id="cityName"></h3>
                 </div>
     <!-- displays temperatures -->
+<iframe id="map"
+    width="600"
+    height="450"
+    style="border:0"
+    loading="lazy"
+    allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCTw0J-GOAlXLk7g8ud7y7JYEJD_4Ikulg
+        &q=1501+E+Morehead+Charlotte">
+</iframe>
                 <div class="display-row">
                     <div class="column">
                         <h4>Current Temperature:</h4>
@@ -42,16 +51,17 @@
     <!-- displays conditions  -->
                     <div class="column"> 
                         <h4>Condition</h4>
-                            <p>  <p id ="con"></p> <img id="weatherIcon" src="images\default.jpg" class="img-responsive" style="width:100%" alt="weather conditions"></p>
+                            <p>  <p id ="con"></p> <img id="weatherIcon" src="images\default.jpg" 
+                            style="width:100%; visibility: hidden;" alt="weather conditions"></p>
                         <h4>Humidity</h4>
-                            <p id="humidity"></p>  
+                            <p id="humidity"></p> 
                     </div> 
     <!-- displays wind conditions -->
                     <div class = "column">
                         <h4>Wind </h4>
-                        Speed: <p id="wind"></p>
+                            <p id="wind"></p>
                         <br>
-                        Gust: <p id="gust"></p>
+                        <!-- Gust: <p id="gust"></p> -->
                         
                     </div>
                 </div>

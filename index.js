@@ -6,8 +6,9 @@ let con = document.getElementById("con");
 let date = document.getElementById("date");
 let weather = document.getElementById("weatherIcon");
 let wind = document.getElementById("wind");
-let gust = document.getElementById("gust");
 let humidity = document.getElementById("humidity");
+let map = document.getElementById("map");
+
 
 //date and time
 let currentDate = new Date();
@@ -26,14 +27,16 @@ function getWeather(e){
     e.preventDefault();
     let zip = search1.value;
 
-
 fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=089afca0039437fccbbf55ef947f7695`,)
     .then(response => response.json()) 
     .then(result => {
         
-        //outputs name of the city searched by zipcode
+        //outputs name of the city and map searched by zipcode
+        //please get your own key for the map to work!
         cityName.innerHTML = result.name;
-        
+        map = document.getElementById("map").src=`https://www.google.com/maps/embed/v1/place?key={YOUR KEY HERE}
+        &q=${zip}`;
+
         //outputs current temperature
         temp.innerHTML = Math.round((result.main.temp*1.8)-459.67)+'F°';
         
@@ -45,12 +48,15 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=089afca0
         high.innerHTML = Math.round((result.main.temp_max*1.8)-459.67)+'F°';
         
         //wind and humidity
-        wind.innerHTML = Math.round(result.wind.speed) + 'mph';
-        gust.innerHTML = Math.round(result.wind.gust) + 'mph';
+        wind.innerHTML = Math.round(result.wind.speed) + 'mph';  
         humidity.innerHTML = result.main.humidity + '%';
+        
         //return input box to placeholder
         search.value = "";
 
+        //make weatherIcon visible
+        document.getElementById("weatherIcon").style.visibility = "visible";
+        
 //weather conditions: thunderstorm, drizzle,  rain, snow, clouds,  clear
 if (con.innerHTML == "Thunderstorm") {
         document.getElementById("weatherIcon").src="images/thunderstorm.png";
@@ -65,8 +71,12 @@ if (con.innerHTML == "Thunderstorm") {
     } else { 
         document.getElementById("weatherIcon").src="images/haze.png";
     }
+
 })
-}
+
+
+
+
 // api call info format
 // {
 //     "coord": {
@@ -111,4 +121,4 @@ if (con.innerHTML == "Thunderstorm") {
 //     "id": 0,
 //     "name": "Houston",
 //     "cod": 200
-// }
+}
